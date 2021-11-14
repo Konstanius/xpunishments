@@ -1,0 +1,39 @@
+name: Xpunishments
+version: ${project.version}
+main: konstanius.xpunishments.Xpunishments
+api-version: 1.17
+authors: [ konstanius ]
+depend: [Vault]
+commands:
+  setkarma:
+    description: Set the karma of a player
+    permission: xpunishments.setkarma
+    permission-message: "§3§lX-Punishments > §7No permission"
+  infractions:
+    description: View previous infractions of a player
+    permission: xpunishments.infractions
+    permission-message: "§3§lX-Punishments > §7No permission"
+  punish:
+    description: Punish a player
+    permission: xpunishments.punish
+    permission-message: "§3§lX-Punishments > §7No permission"
+  xpunishments:
+    description: Help and admin command
+    permission: xpunishments.help
+    permission-message: "§3§lX-Punishments > §7No permission"
+  clearinfractions:
+    description: Reset all Infractions of a Player
+    permission: xpunishments.clearinfractions
+    permission-message: "§3§lX-Punishments > §7No permission"
+  unpunish:
+    description: Delete an Infraction ID from a Player
+    permission: xpunishments.unpunish
+    permission-message: "§3§lX-Punishments > §7No permission"
+  unban:
+    description: Unbans a player
+    permission: xpunishments.unban
+    permission-message: "§3§lX-Punishments > §7No permission"
+  unmute:
+    description: Unmuted a player
+    permission: xpunishments.unmute
+    permission-message: "§3§lX-Punishments > §7No permission"

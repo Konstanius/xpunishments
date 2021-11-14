@@ -1,0 +1,103 @@
+MySQL:
+  host: "localhost"
+  port: "3306"
+  database: "minecraft"
+  user: "root"
+  password: "password"
+seconds-per-karma-reduction: 86400 # -1 to disable
+prefix: "&3&lServer >> &7"
+date-format: "yyyy MM-dd HH:mm:ss z" # MUST CLEAR DATABASE AFTER CHANGING, Format: yyyy-MM-dd HH:mm:ss z
+messages:
+  generic:
+    help: "/punish (player) (reason)\n/xpunishments reload"
+    must-be-player: "Must be a player"
+    player-has-never-joined: "Player has never joined"
+    reason-does-not-exist: "Reason does not exist"
+    must-be-console: "Only console can use this command"
+    plugin-reloaded: "Plugin reloaded"
+    database-reset: "Database reset successfully"
+  punish:
+    not-enough-arguments: "Not enough arguments. Usage: &3/punish <player> <reason>"
+    too-many-arguments: "Too many arguments. Usage: &3/punish <player> <reason>"
+  infractions:
+    not-enough-arguments: "Not enough arguments. Usage: &3/infractions <player>"
+    too-many-arguments: "Too many arguments. Usage: &3/infractions <player>"
+    header-free: "Header Free - Player: %player% - Karma: %karma%"
+    header-muted: "Header Muted - Reason: %reason% - Date: %date% - Player: %player% - Karma: %karma%"
+    header-banned: "Header Banned - Reason: %reason% - Date: %date% - Player: %player% - Karma: %karma%"
+    content: "ID: %id% - Reason: %reason% - Mod: %mod% - Date: %date% - Type: %type%"
+    footer-free: "Footer Free - Player: %player% - Karma: %karma%"
+    footer-muted: "Footer Muted - Reason: %reason% - Date: %date% - Player: %player% - Karma: %karma%"
+    footer-banned: "Footer Banned - Reason: %reason% - Date: %date% - Player: %player% - Karma: %karma%"
+  setkarma:
+    not-enough-arguments: "Not enough arguments. Usage: &3/setkarma <player> <karma>"
+    too-many-arguments: "Too many arguments. Usage: &3/setkarma <player> <karma>"
+    not-int: "Karma must be Integer (1234567890)"
+    success: "Set karma to %karma% for %player%"
+  clearinfractions:
+    not-enough-arguments: "Not enough arguments. Usage: &3/clearinfractions <player>"
+    too-many-arguments: "Too many arguments. Usage: &3/clearinfractions <player>"
+    success: "Cleared all infractions of %player%"
+  unpunish:
+    not-enough-arguments: "Not enough arguments. Usage: &3/unpunish <ID>"
+    too-many-arguments: "Too many arguments. Usage: &3/unpunish <ID>"
+    not-int: "ID must be Integer (1234567890)"
+    id-not-found: "ID was not found"
+    success: "Unpunished ID %id% from %player%"
+  unban:
+    not-enough-arguments: "Not enough arguments. Usage: &3/unban <Player>"
+    too-many-arguments: "Too many arguments. Usage: &3/unban <Player>"
+    player-is-not-banned: "Player is not banned"
+    success: "Unbanned %player%"
+  unmute:
+    not-enough-arguments: "Not enough arguments. Usage: &3/unmute <Player>"
+    too-many-arguments: "Too many arguments. Usage: &3/unmute <Player>"
+    player-is-not-muted: "Player is not muted"
+    success: "Unmuted %player%"
+  list:
+    header: "List header"
+    content: "%reason% - %description%"
+    footer: "List footer"
+  none:
+    punishment: "Successfully punished %player%"
+    punishment-announce: "%mod% punished %player% for %reason%"
+  warn:
+    format: "Warned. &3%reason%"
+    punishment: "Successfully warned %player%"
+    punishment-announce: "%mod% warned %player% for %reason%"
+  mute:
+    format: "Muted. &3%reason% &3%date%"
+    punishment: "Successfully muted %player% - %date%"
+    punishment-announce: "%mod% muted %player% for %reason% - %date%"
+  ban:
+    format: "Banned. \n &3%reason% \n &3%date%"
+    punishment: "Successfully banned %player% - %date%"
+    punishment-announce: "%mod% banned %player% for %reason% - %date%"
+    tried-to-join: "&3%player% &7tried to join but is banned until &3%date% &7- Reason: &3%reason%"
+punishments:
+#  category:
+#    reason: "Reason"
+#    description: "Description"
+#    '1': "TYPE:LENGTH:KARMA"
+#
+#    Type = WARN / MUTE / BAN / NONE
+#    LENGTH = 0 / INT / -1 (0 for WARN)
+#    KARMA = 0 / INT (If above max of a punishment, resort to highest punishment, if below next highest, resort to previous punishment)
+  example:
+    reason: "Example Reason"
+    description: "This is an example reason to punish people"
+    '0': "NONE:0:1"
+    '1': "WARN:0:1"
+    '2': "MUTE:3600:1"
+    '3': "BAN:60:1"
+    '4': "BAN:-1:1"
+
+# Permissions:
+#   xpunishments.setkarma
+#   xpunishments.infractions
+#   xpunishments.punish
+#   xpunishments.help
+#   xpunishments.clearinfractions
+#   xpunishments.unpunish
+#   xpunishments.unban
+#   xpunishments.unmute
