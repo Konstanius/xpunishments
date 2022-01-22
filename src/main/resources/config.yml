@@ -14,6 +14,7 @@ messages:
     player-has-never-joined: "Player has never joined"
     reason-does-not-exist: "Reason does not exist"
     must-be-console: "Only console can use this command"
+    player-is-exempt: "Player is exempt from being punished"
     plugin-reloaded: "Plugin reloaded"
     database-reset: "Database reset successfully"
   punish:

@@ -27,7 +27,6 @@ public final class Xpunishments extends JavaPlugin {
     public static SimpleDateFormat dateformatter;
     @Override
     public void onEnable() {
-        // Exempt permissions + Overwrite permissions
         System.out.println("Enabling XPunishments by Konstanius");
         this.saveDefaultConfig();
         config = this.getConfig();
