@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Objects;
 
 public final class Xpunishments extends JavaPlugin {
+    // Add Bungeecord support for kick / ban / broadcast methods (Pluginmessaging)
     public static String host;
     public static String port;
     public static String database;

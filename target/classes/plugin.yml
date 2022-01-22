@@ -3,7 +3,6 @@ version: 1.1-RELEASE
 main: konstanius.xpunishments.Xpunishments
 api-version: 1.17
 authors: [ konstanius ]
-depend: [Vault]
 commands:
   setkarma:
     description: Set the karma of a player
