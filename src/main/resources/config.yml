@@ -77,7 +77,6 @@ messages:
     punishment: "Successfully banned %player% - %date%"
     punishment-announce: "%mod% banned %player% for %reason% - %date%"
     tried-to-join: "&3%player% &7tried to join but is banned until &3%date% &7- Reason: &3%reason%"
-    victim: "You have been banned until %date%. Reason: %reason%"
 punishments:
 #  category:
 #    reason: "Reason"

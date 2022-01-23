@@ -13,6 +13,7 @@ import java.util.*;
 import static konstanius.xpunishments.Xpunishments.*;
 
 public class punish implements CommandExecutor {
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (!(sender instanceof Player)) {
@@ -132,7 +133,7 @@ public class punish implements CommandExecutor {
                                 sender.sendMessage(messages_prefix + Objects.requireNonNull(config.getString("messages.mute.format")).replace("&", "§").replace("%reason%", reasonstring).replace("%mod%", mod.getName()).replace("%player%", args[0]).replace("%date%", dateuntil));
                             }
                             if(victim.isOnline()) {
-                                victim.sendMessage(messages_prefix + Objects.requireNonNull(config.getString("messages.warn.victim")).replace("&","§").replace("%reason%", reasonstring).replace("%date%", dateuntil));
+                                victim.sendMessage(messages_prefix + Objects.requireNonNull(config.getString("messages.mute.victim")).replace("&","§").replace("%reason%", reasonstring).replace("%date%", dateuntil));
                             }
                             break;
                         }
@@ -160,10 +161,6 @@ public class punish implements CommandExecutor {
                             if (Bukkit.getServer().getPlayer(uuid) != null) {
                                 Objects.requireNonNull(Bukkit.getServer().getPlayer(uuid)).kickPlayer(Objects.requireNonNull(config.getString("messages.ban.format")).replace("&", "§").replace("%reason%", reasonstring).replace("%date%", dateuntil));
                             }
-                            if(victim.isOnline()) {
-                                victim.sendMessage(messages_prefix + Objects.requireNonNull(config.getString("messages.warn.victim")).replace("&","§").replace("%reason%", reasonstring).replace("%date%", dateuntil));
-                            }
-                            break;
                         }
                     }
                 }

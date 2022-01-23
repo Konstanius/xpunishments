@@ -67,7 +67,7 @@ public class xPunishments implements CommandExecutor {
             config = myPlugin.getConfig();
             messages_prefix = Objects.requireNonNull(config.getString("prefix")).replace("&", "§");
             dateformatter = new SimpleDateFormat(Objects.requireNonNull(config.getString("date-format")));
-            myPlugin.karmadecrease();
+            myPlugin.karmaDecrease();
             host = config.getString("MySQL.host");
             port = config.getString("MySQL.port");
             database = config.getString("MySQL.database");

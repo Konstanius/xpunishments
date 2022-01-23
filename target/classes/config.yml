@@ -66,10 +66,12 @@ messages:
     format: "Warned. &3%reason%"
     punishment: "Successfully warned %player%"
     punishment-announce: "%mod% warned %player% for %reason%"
+    victim: "You have been warned. Reason: %reason%"
   mute:
     format: "Muted. &3%reason% &3%date%"
     punishment: "Successfully muted %player% - %date%"
     punishment-announce: "%mod% muted %player% for %reason% - %date%"
+    victim: "You have been muted until %date%. Reason: %reason%"
   ban:
     format: "Banned. \n &3%reason% \n &3%date%"
     punishment: "Successfully banned %player% - %date%"

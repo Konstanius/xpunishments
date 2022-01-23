@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.Objects;
 
 public final class Xpunishments extends JavaPlugin {
-    // Add Bungeecord support for kick / ban / broadcast methods (Pluginmessaging)
     public static String host;
     public static String port;
     public static String database;
@@ -26,6 +25,7 @@ public final class Xpunishments extends JavaPlugin {
     public static BukkitScheduler scheduler = Bukkit.getScheduler();
     public static int timertask;
     public static SimpleDateFormat dateformatter;
+
     @Override
     public void onEnable() {
         System.out.println("Enabling XPunishments by Konstanius");
@@ -58,7 +58,7 @@ public final class Xpunishments extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new joinevent(), this);
         getServer().getPluginManager().registerEvents(new chatevent(), this);
 
-        karmadecrease();
+        karmaDecrease();
 
         try {
             Statement createtable = connection.createStatement();
@@ -70,6 +70,7 @@ public final class Xpunishments extends JavaPlugin {
             e.printStackTrace();
             Bukkit.getPluginManager().disablePlugin(this);
         }
+
     }
 
     @Override
@@ -83,7 +84,7 @@ public final class Xpunishments extends JavaPlugin {
         }
     }
 
-    public void karmadecrease() {
+    public void karmaDecrease() {
         timer = config.getLong("seconds-per-karma-reduction");
         scheduler.runTaskTimer(this, task -> {
             if(timer == -1L) {
